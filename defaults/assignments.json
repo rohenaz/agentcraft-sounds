@@ -1,0 +1,97 @@
+{
+  "global": {
+    "SessionStart": "rohenaz/agentcraft-sounds:sc2/terran/session-start/scv-ready.mp3",
+    "PostToolUseFailure": "rohenaz/agentcraft-sounds:ui/sc-bigbox/set1-select.mp3",
+    "PreCompact": "rohenaz/agentcraft-sounds:sc2/protoss/error/need-minerals.mp3",
+    "SubagentStop": "rohenaz/agentcraft-sounds:sc2/protoss/task-complete/upgrade-complete.mp3",
+    "SessionEnd": "rohenaz/agentcraft-sounds:sc2/terran/task-complete/jobs-finished-2.mp3",
+    "Notification": "rohenaz/agentcraft-sounds:ui/ff7/save-point.mp3",
+    "PostToolUse": "rohenaz/agentcraft-sounds:ui/sc-bigbox/set1-move.mp3"
+  },
+  "agents": {},
+  "settings": {
+    "masterVolume": 1,
+    "enabled": true,
+    "theme": "terran",
+    "uiTheme": "sc2",
+    "uiSounds": {
+      "wc3": {
+        "error": "rohenaz/agentcraft-sounds:ui/wc3/error.mp3",
+        "hover": "rohenaz/agentcraft-sounds:ui/wc3/hover.mp3",
+        "click": "rohenaz/agentcraft-sounds:ui/wc3/click.mp3"
+      },
+      "sc2": {
+        "hover": "rohenaz/agentcraft-sounds:ui/sc-bigbox/set2-move.mp3"
+      },
+      "ff7": {
+        "click": "rohenaz/agentcraft-sounds:ui/ff7/click.mp3",
+        "error": "rohenaz/agentcraft-sounds:ui/ff7/error.mp3",
+        "pageChange": "rohenaz/agentcraft-sounds:ui/ff7/cursor-confirm.mp3",
+        "hover": "rohenaz/agentcraft-sounds:ui/ff7/hover.mp3"
+      }
+    }
+  },
+  "skills": {
+    "npm-publish": {
+      "enabled": true,
+      "hooks": {
+        "PostToolUse": "rohenaz/agentcraft-sounds:sc2/terran/task-complete/upgrade-complete.mp3",
+        "PreToolUse": "rohenaz/agentcraft-sounds:sc2/terran/session-start/siege-tank-ready.mp3"
+      }
+    },
+    "bopen-tools:frontend-design": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:sc2/terran/permission/nuclear-strike.mp3"
+      }
+    },
+    "gemskills:upscale-image": {
+      "enabled": true,
+      "hooks": {}
+    },
+    "bopen-tools:create-next-project": {
+      "enabled": true,
+      "hooks": {}
+    },
+    "bopen-tools:npm-publish": {
+      "enabled": true,
+      "hooks": {}
+    },
+    "bopen-tools:workflow-orchestration": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:sc2/terran/session-start/battlecruiser-ready.mp3"
+      }
+    },
+    "superpowers:subagent-driven-development": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:sc2/terran/session-start/battlecruiser-ready.mp3"
+      }
+    },
+    "bopen-tools:confess": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:sc2/terran/pissed/scv-pissed-2.mp3"
+      }
+    },
+    "bitcoin-auth-diagnostics": {
+      "enabled": true,
+      "hooks": {
+        "PostToolUse": "rohenaz/agentcraft-sounds:sc2/terran/task-complete/research-complete.mp3"
+      }
+    },
+    "ui-audio-theme": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:ui/ff7/cursor-learn.mp3"
+      }
+    },
+    "1sat-skills:wallet-create-ordinals": {
+      "enabled": true,
+      "hooks": {
+        "PreToolUse": "rohenaz/agentcraft-sounds:ui/ff7/fanfare-coin.mp3"
+      }
+    }
+  }
+}

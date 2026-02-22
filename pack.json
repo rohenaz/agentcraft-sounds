@@ -1,0 +1,7 @@
+{
+  "name": "agentcraft-sounds",
+  "publisher": "rohenaz",
+  "version": "2.0.0",
+  "description": "Official AgentCraft sound library — SC2, WC3, FF7, FF9, phones, apps, classic OS",
+  "types": ["sounds", "ui"]
+}
