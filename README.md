@@ -1,72 +1,75 @@
 # agentcraft-sounds
 
-A curated sound library for [AgentCraft](https://github.com/rohenaz/agentcraft) — assign sounds to Claude Code lifecycle events.
+The official sound library for [AgentCraft](https://github.com/rohenaz/agentcraft) — assign sounds to Claude Code lifecycle events.
+
+This is a **sound pack**. AgentCraft installs it automatically on first run.
 
 ## Setup
 
-AgentCraft downloads this library automatically on first run (`/agentcraft`). To install manually or update:
+Installed automatically when you run `/agentcraft` for the first time. To install manually or update:
 
 ```bash
-# First install
-git clone https://github.com/rohenaz/agentcraft-sounds ~/.agentcraft/sounds
+# Install
+agentcraft pack install rohenaz/agentcraft-sounds
 
-# Update later
-git -C ~/.agentcraft/sounds pull
+# Update
+agentcraft pack update rohenaz/agentcraft-sounds
 ```
 
-Then install AgentCraft:
+Or with plain git (same result):
 
 ```bash
-claude plugin install agentcraft@rohenaz
+git clone https://github.com/rohenaz/agentcraft-sounds ~/.agentcraft/packs/rohenaz/agentcraft-sounds
+git -C ~/.agentcraft/packs/rohenaz/agentcraft-sounds pull
 ```
 
-Open the dashboard with `/agentcraft` and start assigning sounds.
-
-## Library Contents
+## Contents
 
 ```
 agentcraft-sounds/
-  sc2/                  StarCraft II sounds
-    terran/
-    protoss/
-    zerg/
+  sc2/                  StarCraft II sounds (terran, protoss, zerg)
   wc3/                  Warcraft III sounds
   ff7/                  Final Fantasy VII sounds
   ff9/                  Final Fantasy IX sounds
-  apps/                 Nostalgic app sounds
-    aim/                AIM door open/close
-    icq/                ICQ "uh oh"
-    winamp/
-  classic-os/           Classic operating system sounds
-    mac/                Mac startup chime, classic sounds
-    windows/            Win95, XP, jungle/utopia startups
-  phones/               Nostalgic mobile device sounds
-    nokia/alerts/       Nokia alert tones
-    motorola/           Motorola button sounds
-    pager/              Pager beeps and blips
-  ui/                   UI theme sounds (used by AgentCraft themes)
+  apps/                 Nostalgic app sounds (AIM, ICQ, Winamp)
+  classic-os/           Mac and Windows startup/UI sounds
+  phones/               Nokia alerts, Motorola buttons, pager beeps
+  ui/                   UI theme sounds
     sc2/                StarCraft II UI theme
     wc3/                Warcraft III UI theme
     ff7/                Final Fantasy VII UI theme
     ff9/                Final Fantasy IX UI theme
     sc-bigbox/          SC BigBox alternate set
+  defaults/
+    assignments.json    Starter configuration for new installs
 ```
 
 ## UI Themes
 
-The `ui/` directory contains themed sets for AgentCraft's interface sounds. Each theme needs these slots (all under `ui/{theme}/`):
+The `ui/` directory powers AgentCraft's ambient interface sounds. Each theme directory needs:
 
 | File | Slot |
 |------|------|
-| `hover.mp3` | Mouse-over sound |
+| `hover.mp3` | Mouse-over |
 | `click.mp3` | Button click |
 | `error.mp3` | Error / failure |
 
-Optional (no default, must be assigned in configurator):
+Optional (silent unless explicitly assigned in the dashboard):
 - `pageChange.mp3` — tab navigation
-- `toggle.mp3` — expand/collapse
-- `confirm.mp3` — assignment confirmed, saved
+- `toggle.mp3` — expand/collapse rows
+- `confirm.mp3` — assignment saved
 
-## Adding Your Own Sounds
+## Creating Your Own Pack
 
-Drop audio files anywhere under `~/.agentcraft/sounds/`. AgentCraft scans the entire directory — any `.mp3`, `.wav`, `.ogg`, or `.m4a` file appears in the browser automatically.
+A sound pack is just a git repo. No manifest required.
+
+1. Create a GitHub repo with your sound files (`.mp3`, `.wav`, `.ogg`, `.m4a`)
+2. Organize however you like — AgentCraft scans recursively
+3. Share it as `your-username/your-repo-name`
+
+Users install it with:
+```bash
+agentcraft pack install your-username/your-repo-name
+```
+
+For a UI theme pack, add a `ui/<theme-name>/` directory with `hover.mp3`, `click.mp3`, and `error.mp3`. The theme name appears automatically in the AgentCraft theme selector.
