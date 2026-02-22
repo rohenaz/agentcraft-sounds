@@ -1,13 +1,17 @@
-# claude-sounds
+# agentcraft-sounds
 
 A curated sound library for [AgentCraft](https://github.com/rohenaz/agentcraft) — assign sounds to Claude Code lifecycle events.
 
 ## Setup
 
-Clone this repo to the expected location:
+AgentCraft downloads this library automatically on first run (`/agentcraft`). To install manually or update:
 
 ```bash
-git clone https://github.com/rohenaz/claude-sounds ~/code/claude-sounds
+# First install
+git clone https://github.com/rohenaz/agentcraft-sounds ~/.agentcraft/sounds
+
+# Update later
+git -C ~/.agentcraft/sounds pull
 ```
 
 Then install AgentCraft:
@@ -21,7 +25,7 @@ Open the dashboard with `/agentcraft` and start assigning sounds.
 ## Library Contents
 
 ```
-claude-sounds/
+agentcraft-sounds/
   sc2/                  StarCraft II sounds
     terran/
     protoss/
@@ -65,4 +69,4 @@ Optional (no default, must be assigned in configurator):
 
 ## Adding Your Own Sounds
 
-Just drop audio files anywhere under `~/code/claude-sounds/`. AgentCraft scans the entire directory — any `.mp3`, `.wav`, `.ogg`, or `.m4a` file appears in the browser automatically.
+Drop audio files anywhere under `~/.agentcraft/sounds/`. AgentCraft scans the entire directory — any `.mp3`, `.wav`, `.ogg`, or `.m4a` file appears in the browser automatically.
